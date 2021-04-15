@@ -52,6 +52,10 @@ VERIFIQUE QUE NO ESTE CORRIENDO nginx NATIVO EN LA MÁQUINA, detengalo!!!!
     ps ax | grep nginx
     netstat -an | grep 80
 
+    sudo reboot
+
+vuelve y se conecta a la máquina para que ese proceso no esté corriendo.
+
 UNA VEZ DETENIDO:
 
     cd /home/ec2-user/wordpress
