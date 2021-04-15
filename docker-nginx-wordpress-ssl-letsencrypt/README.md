@@ -34,26 +34,26 @@
 
 #6. copie los archivos del docker al sitio propio e inicie
 
-    despues de clonar este repositorio en el destino:
+despues de clonar este repositorio en el destino:
 
-    git clone .....
+git clone .....
 
-    $ cd st026320211/docker-nginx-wordpress-ssl-letsencrypt
-    $ sudo cp docker-compose.yml /home/ec2-user/wordpress
-    $ sudo cp nginx.conf /home/ec2-user/wordpress
-    $ sudo cp ssl.conf /home/ec2-user/wordpress
+    cd st026320211/docker-nginx-wordpress-ssl-letsencrypt
+    sudo cp docker-compose.yml /home/ec2-user/wordpress
+    sudo cp nginx.conf /home/ec2-user/wordpress
+    sudo cp ssl.conf /home/ec2-user/wordpress
 
 #7. inicie el servidor de wordpress en docker.
 
-    VERIFIQUE QUE NO ESTE CORRIENDO nginx NATIVO EN LA MÁQUINA, detengalo!!!!
+VERIFIQUE QUE NO ESTE CORRIENDO nginx NATIVO EN LA MÁQUINA, detengalo!!!!
 
-    $ ps ax | grep nginx
-    $ netstat -an | grep 80
+    ps ax | grep nginx
+    netstat -an | grep 80
 
-    UNA VEZ DETENIDO:
+UNA VEZ DETENIDO:
 
-    $ cd /home/ec2-user/wordpress
-    $ sudo docker-compose up --build -d
+    cd /home/ec2-user/wordpress
+    sudo docker-compose up --build -d
 
 #8. pruebe desde un browser:
 
