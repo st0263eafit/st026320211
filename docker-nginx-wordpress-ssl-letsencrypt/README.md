@@ -15,11 +15,11 @@
 
 #4. cree el los archivos docker-compose
 
-    mkdir $HOME/wordpress
-    mkdir $HOME/wordpress/ssl
-    sudo cp /etc/letsencrypt/live/www.emontoya.ml/* $HOME/wordpress/ssl/
-    sudo cp /etc/letsencrypt/options-ssl-nginx.conf $HOME/wordpress/ssl/
-    sudo cp /etc/letsencrypt/ssl-dhparams.pem $HOME/wordpress/ssl/
+    mkdir /home/ec2-user/wordpress
+    mkdir /home/ec2-user/wordpress/ssl
+    sudo cp /etc/letsencrypt/live/www.emontoya.ml/* /home/ec2-user/wordpress/ssl/
+    sudo cp /etc/letsencrypt/options-ssl-nginx.conf /home/ec2-user/wordpress/ssl/
+    sudo cp /etc/letsencrypt/ssl-dhparams.pem /home/ec2-user/wordpress/ssl/
 
 #5. instalar docker y docker-compose:
 
