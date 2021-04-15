@@ -17,9 +17,11 @@
 
     mkdir /home/ec2-user/wordpress
     mkdir /home/ec2-user/wordpress/ssl
-    sudo cp /etc/letsencrypt/live/www.emontoya.ml/* /home/ec2-user/wordpress/ssl/
-    sudo cp /etc/letsencrypt/options-ssl-nginx.conf /home/ec2-user/wordpress/ssl/
-    sudo cp /etc/letsencrypt/ssl-dhparams.pem /home/ec2-user/wordpress/ssl/
+    sudo su
+    cp /etc/letsencrypt/live/www.sudominio.com/* /home/ec2-user/wordpress/ssl/
+    cp /etc/letsencrypt/options-ssl-nginx.conf /home/ec2-user/wordpress/ssl/
+    cp /etc/letsencrypt/ssl-dhparams.pem /home/ec2-user/wordpress/ssl/
+    exit
 
 #5. instalar docker y docker-compose:
 
