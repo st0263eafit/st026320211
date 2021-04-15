@@ -38,7 +38,7 @@
 
 despues de clonar este repositorio en el destino:
 
-git clone .....
+    git clone https://github.com/st0263eafit/st026320211.git
 
     cd st026320211/docker-nginx-wordpress-ssl-letsencrypt
     sudo cp docker-compose.yml /home/ec2-user/wordpress
