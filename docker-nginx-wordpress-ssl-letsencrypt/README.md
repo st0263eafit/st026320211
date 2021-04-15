@@ -59,7 +59,7 @@ vuelve y se conecta a la máquina para que ese proceso no esté corriendo.
 UNA VEZ DETENIDO:
 
     cd /home/ec2-user/wordpress
-    sudo docker-compose up --build -d
+    docker-compose up --build -d
 
 #8. pruebe desde un browser:
 
