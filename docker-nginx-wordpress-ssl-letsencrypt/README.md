@@ -32,3 +32,32 @@
     sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
     sudo chmod +x /usr/local/bin/docker-compose
     exit
+
+6. copie los archivos del docker al sitio propio e inicie
+
+    despues de clonar este repositorio en el destino:
+
+    git clone .....
+
+    $ cd st026320211/docker-nginx-wordpress-ssl-letsencrypt
+    $ sudo cp docker-compose.yml /home/ec2-user/wordpress
+    $ sudo cp nginx.conf /home/ec2-user/wordpress
+    $ sudo cp ssl.conf /home/ec2-user/wordpress
+
+7. inicie el servidor de wordpress en docker.
+
+    VERIFIQUE QUE NO ESTE CORRIENDO nginx NATIVO EN LA MÁQUINA, detengalo!!!!
+
+    $ ps ax | grep nginx
+    $ netstat -an | grep 80
+
+    UNA VEZ DETENIDO:
+
+    $ cd /home/ec2-user/wordpress
+    $ sudo docker-compose up --build -d
+
+8. pruebe desde un browser:
+
+    https://sudominio.com o https://www.sudominio.com
+
+9.  FELICITACIONES, lo logro!!!!!
