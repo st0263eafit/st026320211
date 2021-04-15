@@ -1,20 +1,20 @@
-1. en una máquina AWS EC2 nueva:
-2. con la dirección IP Elastica de esa máquina, cree las entradas en el DNS:
+#1. en una máquina AWS EC2 nueva:
+#2. con la dirección IP Elastica de esa máquina, cree las entradas en el DNS:
 
     sudominio.com -> IP Elastica
     www.sudominio.com -> misma IP Elastica
 
-2. instale certbot:
+#2. instale certbot:
 
     sudo amazon-linux-extras install epel -y
     sudo yum install certbot-nginx -y
     sudo yum install nginx -y
 
-3. Ejecute certbot para pedir certificado SSL:
+#3. Ejecute certbot para pedir certificado SSL:
 
     sudo certbot --nginx certonly -d www.sudominio.com -d sudominio.com
 
-4. cree el los archivos docker-compose
+#4. cree el los archivos docker-compose
 
     mkdir $HOME/wordpress
     mkdir $HOME/wordpress/ssl
@@ -22,7 +22,7 @@
     sudo cp /etc/letsencrypt/options-ssl-nginx.conf $HOME/wordpress/ssl/
     sudo cp /etc/letsencrypt/ssl-dhparams.pem $HOME/wordpress/ssl/
 
-5. instalar docker y docker-compose:
+#5. instalar docker y docker-compose:
 
     sudo amazon-linux-extras install docker -y
     sudo yum install git -y
@@ -33,7 +33,7 @@
     sudo chmod +x /usr/local/bin/docker-compose
     exit
 
-6. copie los archivos del docker al sitio propio e inicie
+#6. copie los archivos del docker al sitio propio e inicie
 
     despues de clonar este repositorio en el destino:
 
@@ -44,7 +44,7 @@
     $ sudo cp nginx.conf /home/ec2-user/wordpress
     $ sudo cp ssl.conf /home/ec2-user/wordpress
 
-7. inicie el servidor de wordpress en docker.
+#7. inicie el servidor de wordpress en docker.
 
     VERIFIQUE QUE NO ESTE CORRIENDO nginx NATIVO EN LA MÁQUINA, detengalo!!!!
 
@@ -56,8 +56,8 @@
     $ cd /home/ec2-user/wordpress
     $ sudo docker-compose up --build -d
 
-8. pruebe desde un browser:
+#8. pruebe desde un browser:
 
     https://sudominio.com o https://www.sudominio.com
 
-9.  FELICITACIONES, lo logro!!!!!
+#9.  FELICITACIONES, lo logro!!!!!
