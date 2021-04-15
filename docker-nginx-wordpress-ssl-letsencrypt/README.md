@@ -1,5 +1,4 @@
-#1. en una máquina AWS EC2 nueva:
-#2. con la dirección IP Elastica de esa máquina, cree las entradas en el DNS:
+#1. en una máquina AWS EC2 nueva y con la dirección IP Elastica de esa máquina, cree las entradas en el DNS:
 
     sudominio.com -> IP Elastica
     www.sudominio.com -> misma IP Elastica
