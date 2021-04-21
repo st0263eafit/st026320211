@@ -35,9 +35,9 @@ comando para wildcard (*.sudominio.com):
 
 Nota: estas instrucciones son para nginx, pero si se requiere para haproxy:
 
-$ DOMAIN='sudominio.com' bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/letsencrypt/$DOMAIN.pem'
+    DOMAIN='sudominio.com' bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/letsencrypt/$DOMAIN.pem'
 
-$ cp /etc/letsencrypt/live/sudominio.com/* /home/ec2-user/wordpress/ssl/
+    cp /etc/letsencrypt/live/sudominio.com/* /home/ec2-user/wordpress/ssl/
 
     cp /etc/letsencrypt/options-ssl-nginx.conf /home/ec2-user/wordpress/ssl/
     cp /etc/letsencrypt/ssl-dhparams.pem /home/ec2-user/wordpress/ssl/
