@@ -27,13 +27,13 @@ Este comando queda pausado indicando que debe crear un registro TXT en su domini
     mkdir /home/ec2-user/wordpress/ssl
     sudo su
 
-comando para registros especificos (ej: www):
+### comando para registros especificos (ej: www):
     cp /etc/letsencrypt/live/www.sudominio.com/* /home/ec2-user/wordpress/ssl/
 
-comando para wildcard (*.sudominio.com):
+### comando para wildcard (*.sudominio.com):
     cp /etc/letsencrypt/live/sudominio.com/* /home/ec2-user/wordpress/ssl/
 
-Nota: estas instrucciones son para nginx, pero si se requiere para haproxy:
+### Nota: estas instrucciones son para nginx, pero si se requiere para haproxy:
 
     DOMAIN='sudominio.com' bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/letsencrypt/$DOMAIN.pem'
 
