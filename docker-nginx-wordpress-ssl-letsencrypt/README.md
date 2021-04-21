@@ -9,9 +9,17 @@
     sudo yum install certbot-nginx -y
     sudo yum install nginx -y
 
-#3. Ejecute certbot para pedir certificado SSL:
+#3.1 Ejecute certbot para pedir certificado SSL para registros especificos:
 
     sudo certbot --nginx certonly -d www.sudominio.com -d sudominio.com
+
+#3.2  Ejecute certbot para pedir certificado SSL para todo el dominio (wildcard):
+
+ref: https://medium.com/@utkarsh_verma/how-to-obtain-a-wildcard-ssl-certificate-from-lets-encrypt-and-setup-nginx-to-use-wildcard-cfb050c8b33f
+
+    sudo certbot --server https://acme-v02.api.letsencrypt.org/directory -d *.example.com --manual --preferred-challenges dns-01 certonly
+
+Este comando queda pausado indicando que debe crear un registro TXT en su dominio, una vez lo cree y verifique, dele ENTER para Continuar. Debe terminar con éxito.
 
 #4. cree el los archivos docker-compose
 
