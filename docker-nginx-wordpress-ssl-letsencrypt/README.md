@@ -26,7 +26,13 @@ Este comando queda pausado indicando que debe crear un registro TXT en su domini
     mkdir /home/ec2-user/wordpress
     mkdir /home/ec2-user/wordpress/ssl
     sudo su
+
+comando para registros especificos (ej: www):
     cp /etc/letsencrypt/live/www.sudominio.com/* /home/ec2-user/wordpress/ssl/
+
+comando para wildcard (*.sudominio.com):
+    cp /etc/letsencrypt/live/sudominio.com/* /home/ec2-user/wordpress/ssl/
+
     cp /etc/letsencrypt/options-ssl-nginx.conf /home/ec2-user/wordpress/ssl/
     cp /etc/letsencrypt/ssl-dhparams.pem /home/ec2-user/wordpress/ssl/
     exit
