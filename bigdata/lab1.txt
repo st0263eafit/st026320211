@@ -36,7 +36,7 @@ Recuerden que estos datos de HDFS son efímeros o temporales y se borran cuando 
 
 En esta infraestructura, cada alumno deberá realizar el copiado de los archivos datasets de:
 
-st026320211/bigdata/datasets at main · st0263eafit/st026320211 (github.com)
+https://github.com/st0263eafit/st026320211/tree/main/bigdata/datasets
 
 6. Cada alumno, de forma individual, deberá realizar estos labs, en el caso de EMR, si alguno no tiene cuenta, podrán utilizar un EMR común y realizar la separación en los directorios hdfs o en los buckets AWS S3.
 
