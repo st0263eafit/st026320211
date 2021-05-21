@@ -35,6 +35,8 @@ Utilizando la cuenta de amazon educate, y los videos compartidos para la clase, 
 
 ## 2. Gestión de archivos en S3 y HDFS
 
+VER INDICACIONES EN: [LAB1](lab1.txt)
+
 Copiar todos los archivos del [datasets](datasets) tanto en S3 (permanente) y en HDFS del cluster del DCA. 
 
 * ver: [HDFS](01-hdfs)

@@ -3,8 +3,8 @@ Instalar docker en linux-ami2
     sudo amazon-linux-extras install docker -y
     sudo yum install git -y
 
-    sudo systemctl enable docker -y
-    sudo systemctl start docker -y
+    sudo systemctl enable docker
+    sudo systemctl start docker
     sudo usermod -a -G docker ec2-user
 
 instalar docker-compose: https://docs.docker.com/compose/install/
