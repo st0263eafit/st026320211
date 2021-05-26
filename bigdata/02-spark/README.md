@@ -12,8 +12,8 @@
 // ya trae preconfigurado las variables sc y spark
 
     $ pyspark
-    >>> files = sc.textFile("hdfs:///datasets/gutenberg-small/*.txt")
-    >>> wc_unsort = files.flatMap(lambda line: line.split()).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
+    >>> files_rdd = sc.textFile("hdfs:///datasets/gutenberg-small/*.txt")
+    >>> wc_unsort = files_rdd.flatMap(lambda line: line.split()).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
     >>> wc = wc_unsort.sortBy(lambda a: -a[1])
     >>> for tupla in wc.take(10):
     >>>     print(tupla)
