@@ -1,0 +1,22 @@
+LAB2: Wordcount en Apache Spark
+
+1. ejecutar el wordcount por linea de comando 'pyspark' INTERACTIVO en HDP con datos en HDFS vía https://hdpssh.dis.eafit.edu.co 
+
+2. ejecutar el wordcount por spark-submit HDP con datos en HDFS vía https://hdpssh.dis.eafit.edu.co 
+
+3. ejecutar el wordcount en HDP zeppelin (https://hdpzeppelin.dis.eafit.edu.co) con datos en HDFS
+
+4. ejecutar el wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master.
+
+5. ejecutar el wordcount por linea de comando 'pyspakr' INTERACTIVO en EMR con datos en S3 (tanto de entrada como de salida)  vía ssh en el nodo master.
+
+3. ejecutar el wordcount en Notebooks EMR con datos en S3 (tanto datos de entrada como de salida) usando un clúster EMR.
+
+Tenerlo listo para viernes antes de clase (28 de mayo)
+
+Github actualizado en:
+
+https://github.com/st0263eafit/st026320211/tree/main/bigdata/02-spark
+
+https://github.com/st0263eafit/st026320211.git
+
