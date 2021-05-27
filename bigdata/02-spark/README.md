@@ -17,7 +17,7 @@
     >>> wc = wc_unsort.sortBy(lambda a: -a[1])
     >>> for tupla in wc.take(10):
     >>>     print(tupla)
-    >>> wc.saveAsTextFile("hdfs:///tmp/wcout1")
+    >>> wc.saveAsTextFile("hdfs:///tmp/<your-username>wcout1")
 
     * asi salva wc un archivo por rdd.
     * si quiere que se consolide en un solo archivo de salida:
@@ -25,7 +25,7 @@
     $ pyspark
     >>> ...
     >>> ...
-    >>> wc.coalesce(1).saveAsTextFile("hdfs:///tmp/wcout2")
+    >>> wc.coalesce(1).saveAsTextFile("hdfs:///tmp/<your-username>wcout2")
 
 ## 2. Como un archivo python: [wc-pyspark.py](wc-pyspark.py)
 
@@ -57,7 +57,7 @@ Cree un Notebook:
     wc = wc_unsort.sortBy(lambda a: -a[1])
     for tupla in wc.take(10):
         print(tupla)
-    wc.coalesce(1).saveAsTextFile("hdfs:///tmp/wcout1")
+    wc.coalesce(1).saveAsTextFile("hdfs:///tmp/<your-username>wcout1")
 ```
 ## 4. Jupyter Notebooks en EMR
 
