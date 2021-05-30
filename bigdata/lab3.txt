@@ -1,0 +1,50 @@
+I. Replique y ejecute el notebook: Data_processing_using_PySpark.ipynb con los datos respectivos.
+ejecutelo en AWS EMR.
+
+II. Teniendo como entrada los datos: datasets/spark/Casos_positivos_de_COVID-19_en_Colombia.csv
+
+si quiere trabajar con los últimos datos, descarguelos de: 
+
+    https://www.datos.gov.co/api/views/gt2j-8ykr/rows.csv?accessType=DOWNLOAD
+
+        ejecute el comando:
+
+        $ wget https://www.datos.gov.co/api/views/gt2j-8ykr/rows.csv?accessType=DOWNLOAD
+
+    o tambien están en el github: datasets/spark/Casos_positivos_de_COVID-19_en_Colombia.csv.zip
+
+Utilizando como base el jupyter notebook: 02-spark/Data_processing_using_PySpark.ipynb realice sobre los datos de covid:
+
+1. cargar datos
+2. análisis exploratorio del dataframe:
+   2.1 columnas
+   2.2 tipos de datos
+   2.3 seleccionar algunas columnas
+   2.4 agregar columnas
+   2.5 borrar columnas
+   2.6 filtrar datos
+   2.7 ejecutar alguna función UDF o lambda sobre alguna columna creando una nueva.
+
+3. contestar las siguientes preguntas sobre los datos de covid:
+
+   3.1 Los 10 departamentos con más casos de covid en Colombia ordenados de mayor a menor.
+   3.2 Las 10 ciudades con más casos de covid en Colombia ordenados de mayor a menor.
+   3.3 Los 10 días con más casos de covid en Colombia ordenados de mayor a menor.
+   3.4 Distribución de casos por edades de covid en Colombia.
+   3.5 Realice la pregunda de negocio que quiera sobre los datos y respondala con la correspondiente programación en spark.
+
+4. salve los datos del numeral 3, en el bucket público de cada estudiante y en HDFS (Para HDP)
+
+5. El lab3 debe ser realizado en EMR/Notebooks con datos origen y destino en S3
+   y debe ser realizado en HDPZeppelin (https://hdpzeppelin.dis.eafit.edu.co) con datos origen y destino en HDFS
+
+Entregables:
+
+Cada alumno enviará al profesor:
+
+      El notebook .ipynb donde desarrolla los numerales 2.x y 3.x
+      La URI del S3 donde están los datos de salida del numeral 3.x
+
+      El notebook .json de zeppellin en HDP.
+      El directorio HDFS en HDP donde coloco los datos de salida (/user/<username>/lab3-salida/...)
+      
