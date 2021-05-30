@@ -1,3 +1,6 @@
+LAB 3 - Spark con Notebooks y PySpark.
+Fecha máx de entrega: 4 junio 2021
+
 I. Replique y ejecute el notebook: Data_processing_using_PySpark.ipynb con los datos respectivos.
 ejecutelo en AWS EMR.
 
