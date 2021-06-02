@@ -1,0 +1,44 @@
+LAB 4 - Hive SQL y Spark SQL
+Fecha máx de entrega: 9 junio 2021
+
+1. Reproduzca los diferentes ejercicios de hive y spark sql de: 04-hive-sparksql/README.md
+
+2. basado en los datos más recientes de covid19 en Colombia, sobre los cuales uds en lab3 contestaron 5 preguntas de negocio con procesamiento en Dataframes, ahora en este lab4, uds contestarán las mismas preguntas PERO en SQL en los siguientes ambientes:
+
+1. AWS EMR / Hue / Con tablas EXTERNAS con datos en S3 (HIVE: para la creación de la tabla y responder las preguntas de negocio)
+2. AWS EMR / Notebooks / Con datos externos en S3 (SPARK SQL: ver ejemplo 'sparksql-onu-jupyter.ipynb') (carga de datos en dataframes, creación de tabla temporal sql y responden en SQL las preguntas de negocio)
+3. HDP ssh / beeline / Con tablas MANEJADAS en HDFS (HIVE: para la creación de la tabla manejada, carga de datos y respuesta las preguntas de negocio en SQL)
+4. HDP Zeppelin / usando la tabla creada en 3. (SPARK SQL: carga de datos en Dataframes, creación de tabla temporal, contestar las preguntas de negocio con spark.sql("sentencias SQL") y con %sql SQL PURO. use como ejemplo el notebook: spark-onu-zeppelin.json)
+
+## Preguntas de negocio (Responder en SQL):
+
+   4.1 Los 10 departamentos con más casos de covid en Colombia ordenados de mayor a menor.
+   4.2 Las 10 ciudades con más casos de covid en Colombia ordenados de mayor a menor.
+   4.3 Los 10 días con más casos de covid en Colombia ordenados de mayor a menor.
+   4.4 Distribución de casos por edades de covid en Colombia.
+   4.5 Realice la pregunda de negocio que quiera sobre los datos y respondala con la correspondiente programación en SQL.
+
+ ## Creación de tabla covid colombia con datos recientes (+550 MB):
+
+### en EMR / Hive / S3: (tabla externa)
+
+CREATE EXTERNAL TABLE covidcolombia (`fecha reporte web` string, `ID de caso` int, `Fecha de notificación` string, `Código DIVIPOLA departamento` int, `Nombre departamento` string, `Código DIVIPOLA municipio` int, `Nombre municipio` string, `Edad` int, `Unidad de medida de edad` int, `Sexo` string, `Tipo de contagio` string, `Ubicación del caso` string, `Estado` string, `Código ISO del país` int, `Nombre del país` string, `Recuperado` string, `Fecha de inicio de síntomas` string, `Fecha de muerte` string, `Fecha de diagnóstico` string, `Fecha de recuperación` string, `Tipo de recuperación` string, `Pertenencia étnica` int, `Nombre del grupo étnico` string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE 
+LOCATION 's3://<bucketname>/datasets/covid/'
+
+### en HDP / Hive / HDFS: (tabla manejada)
+
+CREATE TABLE covidcolombia (`fecha reporte web` string, `ID de caso` int, `Fecha de notificación` string, `Código DIVIPOLA departamento` int, `Nombre departamento` string, `Código DIVIPOLA municipio` int, `Nombre municipio` string, `Edad` int, `Unidad de medida de edad` int, `Sexo` string, `Tipo de contagio` string, `Ubicación del caso` string, `Estado` string, `Código ISO del país` int, `Nombre del país` string, `Recuperado` string, `Fecha de inicio de síntomas` string, `Fecha de muerte` string, `Fecha de diagnóstico` string, `Fecha de recuperación` string, `Tipo de recuperación` string, `Pertenencia étnica` int, `Nombre del grupo étnico` string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE 
+
+ENTREGABLES:
+
+Cada alumno enviará al profesor:
+
+      El notebook .ipynb (EMR) Y el zeppellin (HDP) donde desarrolla los numerales 4.x
+
+      Documento .txt o docx donde coloca TODOS los scripts SQL utilizados y registra las líneas de salida de cada comando SQL.
+
+      La URI del S3 donde están los datos de salida del numeral 4.x si hay lugar a ello (opcional)
